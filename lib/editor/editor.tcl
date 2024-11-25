@@ -873,13 +873,13 @@ class Editor {
 		bind $editor <Control-Key-Next> "break"
 		bind $editor <Control-Key-Prior> "break"
 		bind $editor <Key-Left> "
-			[bind Text <Key-Left>]
+			[bind Text <<PrevChar>>]
 			$this resetUpDownIndex
 			$this recalc_status_counter {}
 			$this rightPanel_adjust \[expr {int(\[%W index insert\])}\]
 			break"
 		bind $editor <Key-Right> "
-			[bind Text <Key-Right>]
+			[bind Text <<NextChar>>]
 			$this resetUpDownIndex
 			$this recalc_status_counter {}
 			$this rightPanel_adjust \[expr {int(\[%W index insert\])}\]
