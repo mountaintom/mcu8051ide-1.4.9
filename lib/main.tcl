@@ -80,7 +80,7 @@ set LIBRARIES_TO_LOAD {
 	{Itcl		3.4}
 	{md5		2.0}
 	{Tk		8.5}
-	{img::png	1.3}
+	{img::png	2.0}
 	{tdom		0.8}
 	{Tclx		8.0}
 	{Signal		1.4}
@@ -244,7 +244,7 @@ proc libraryLoadFailed {library} {
 # -----------------------------
 # Load Tk ToolKit
 set T [lindex [time {
-	if {[catch {package require img::png 1.3} e]} {
+	if {[catch {package require img::png 2.0} e]} {
 		libraryLoadFailed "img::png"
 	}
 	if {[catch {package require Tk $::MIN_TCL_VER} errinfo]} {
